@@ -23,7 +23,7 @@ Patterns can be tweaked in preferences to accommodate different cases.
 
 ## Screenshots
 
-![Follow next](http://github.com/gaving/follownext-safari/raw/master/site/1.png)
+![Follow next](https://github.com/gaving/follownext-safari/raw/master/site/1.png)
 
 ## Credit
 
