@@ -9,8 +9,8 @@
 
 ## Usage
 
-- Press ^ ← *(cmd-left)* for following 'previous' links
-- Press ^ → *(cmd-right)* for following 'next' links
+- Press ^ ← *(ctrl-left)* for following 'previous' links
+- Press ^ → *(ctrl-right)* for following 'next' links
 
 Works for most sane page layouts, e.g.:
 
