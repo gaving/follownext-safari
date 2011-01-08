@@ -51,16 +51,16 @@ var FNInjection = (function() {
                 }
 
                 // <link>s have priority
-                var links = getLinks($('link', frame.document));
-                links.each(function(i, $e) {
-                    inj.openLink($e.attr('href'));
+                var $links = getLinks($('link', frame.document));
+                $.each($links, function(i, e) {
+                    inj.openLink($(e).attr('href'));
                     return true;
                 });
 
                 // Try anchors
-                links = getLinks($('a', frame.document));
-                $.each(links, function(i, $e) {
-                    inj.followLink($e);
+                $links = getLinks($('a', frame.document));
+                $.each($links, function(i, e) {
+                    inj.followLink($(e));
                     return true;
                 });
 
