@@ -52,10 +52,12 @@ var FNInjection = (function() {
 
                 // <link>s have priority
                 var $links = getLinks($('link', frame.document));
+
                 $.each($links, function(i, e) {
                     inj.openLink($(e).attr('href'));
                     return true;
                 });
+
 
                 // Try anchors
                 $links = getLinks($('a', frame.document));
@@ -68,7 +70,7 @@ var FNInjection = (function() {
                 var $x = $.xpath(hint, frame.document);
                 var r = false;
 
-                $.each(regexes.reverse(), function(i, regex) {
+                $.each(regexes, function(i, regex) {
                     $x.each(function(i, $e) {
                         if (regex.test($e.text()) || regex.test($e.attr('title')) || regex.test($e.attr('id'))) {
                             inj.followLink($e);
@@ -78,7 +80,7 @@ var FNInjection = (function() {
                     });
 
                     if (r) {
-                        return;
+                        return false;
                     }
                 });
 

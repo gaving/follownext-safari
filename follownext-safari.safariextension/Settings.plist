@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>DefaultValue</key>
-		<string>\bnext\b,^&gt;$,^(&gt;&gt;|»|›)$,^(&gt;|»|›),(&gt;|»|›)$,\bmore\b</string>
+		<string>\bnext|older\b,^&gt;$,^(&gt;&gt;|»|›)$,^(&gt;|»|›),(&gt;|»|›)$,\bmore\b</string>
 		<key>Key</key>
 		<string>nextpattern</string>
 		<key>Title</key>
@@ -14,7 +14,7 @@
 	</dict>
 	<dict>
 		<key>DefaultValue</key>
-		<string>\bprev|previous\b,^&lt;$,^(&lt;&lt;|«|‹)$,^(&lt;|«|‹),(&lt;|«|‹)$</string>
+		<string>\bprev|previous|newer\b,^&lt;$,^(&lt;&lt;|«|‹)$,^(&lt;|«|‹),(&lt;|«|‹)$</string>
 		<key>Key</key>
 		<string>prevpattern</string>
 		<key>Title</key>
