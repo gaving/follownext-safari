@@ -11,13 +11,40 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.1</string>
+	<string>1.0.2</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.1</string>
+	<string>1.0.2</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Global Page</key>
 		<string>global.html</string>
+		<key>Toolbar Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>follow-previous</string>
+				<key>Identifier</key>
+				<string>follow-previous</string>
+				<key>Image</key>
+				<string>NavFollowPrevButton.png</string>
+				<key>Include By Default</key>
+				<false/>
+				<key>Label</key>
+				<string>Follow link to the previous page</string>
+				<key>Tool Tip</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>Command</key>
+				<string>follow-next</string>
+				<key>Identifier</key>
+				<string>follow-next</string>
+				<key>Image</key>
+				<string>NavFollowNextButton.png</string>
+				<key>Label</key>
+				<string>Follow link to the next page</string>
+			</dict>
+		</array>
 	</dict>
 	<key>Content</key>
 	<dict>

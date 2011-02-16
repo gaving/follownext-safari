@@ -3,6 +3,33 @@
     <head>
         <title>Placeholder</title>
         <script type="text/javascript" src="global.js"></script>
+		<script>
+		// Register for the validate and command events.
+		safari.application.addEventListener("command", performCommand, false);
+		safari.application.addEventListener("validate", validateCommand, false);
+		
+		function performCommand(event)
+		{
+			// You should always check the command.
+			if (event.command == "follow-next") {
+				alert("next");
+				// safari.self.tab.page.dispatchMessage(findLink, "next");
+			} else if (event.command == "follow-previous") {
+				alert("previous");
+				// safari.self.tab.dispatchMessage(findLink, "previous");
+			}
+		}
+		
+		function validateCommand(event)
+		{
+			// always check the command.
+			if (event.command !== "follow-next" || event.command !== "follow-previous")
+				return;
+		
+			// Disable the target if the no links are found
+			// event.target.disabled = /* some logic here to count found links */;
+		}
+		</script>
     </head>
     <body>
         Move along.
