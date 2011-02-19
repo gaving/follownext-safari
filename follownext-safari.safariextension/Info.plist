@@ -30,7 +30,7 @@
 				<key>Include By Default</key>
 				<false/>
 				<key>Label</key>
-				<string>Follow link to the previous page</string>
+				<string>Follow link to previous page</string>
 				<key>Tool Tip</key>
 				<string></string>
 			</dict>
@@ -42,7 +42,7 @@
 				<key>Image</key>
 				<string>NavFollowNextButton.png</string>
 				<key>Label</key>
-				<string>Follow link to the next page</string>
+				<string>Follow link to next page</string>
 			</dict>
 		</array>
 	</dict>
