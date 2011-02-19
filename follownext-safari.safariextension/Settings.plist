@@ -14,7 +14,7 @@
 	</dict>
 	<dict>
 		<key>DefaultValue</key>
-		<string>\bprev|previous|newer\b,^&lt;$,^(&lt;&lt;|«|‹)$,^(&lt;|«|‹),(&lt;|«|‹)$</string>
+		<string>\bprev(?!iew)|previous|newer\b,^&lt;$,^(&lt;&lt;|«|‹)$,^(&lt;|«|‹),(&lt;|«|‹)$</string>
 		<key>Key</key>
 		<string>prevpattern</string>
 		<key>Title</key>
