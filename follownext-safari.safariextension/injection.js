@@ -7,7 +7,7 @@ var FNInjection = (function() {
         init: function() {
             if (window !== window.top) return;
 
-            safari.self.addEventListener("message", function(msg) {
+            safari.self.addEventListener('message', function(msg) {
                 FNInjection[msg.name](msg.message);
             }, false);
 
@@ -18,8 +18,8 @@ var FNInjection = (function() {
                     var item, coll = [];
                     var result = document.evaluate(exp, ctxt || document, function lookupNamespaceURI(prefix) {
                         return {
-                            xhtml: "http://www.w3.org/1999/xhtml",
-                            xhtml2: "http://www.w3.org/2002/06/xhtml2"
+                            xhtml: 'http://www.w3.org/1999/xhtml',
+                            xhtml2: 'http://www.w3.org/2002/06/xhtml2'
                         }[prefix] || null;
                     }, 5, null);
 
@@ -35,10 +35,10 @@ var FNInjection = (function() {
         findLink: function (rel) {
             var inj = this;
             var regexes = [];
-            var patterns = this.patterns[rel].split(",");
+            var patterns = this.patterns[rel].split(',');
 
             $.each(patterns, function(i, pattern) {
-                regexes.push(new RegExp(pattern, "i"));
+                regexes.push(new RegExp(pattern, 'i'));
             });
 
             function followFrame(frame) {
@@ -89,7 +89,7 @@ var FNInjection = (function() {
 
             var ret = followFrame(window);
             if (!ret) {
-                inj.alert("Nothing found to follow!");
+                inj.alert('Nothing found to follow!');
                 // TODO: Loop through frames if content didn't match
             }
         },
@@ -97,7 +97,7 @@ var FNInjection = (function() {
         followLink: function ($elem) {
             $elem.focus();
             var inj = this;
-            $.each(["mousedown", "mouseup", "click"], function (i, event) {
+            $.each(['mousedown', 'mouseup', 'click'], function (i, event) {
                 inj.triggerEvent($elem[0], event);
             });
         },
@@ -107,7 +107,7 @@ var FNInjection = (function() {
         },
 
         triggerEvent: function (elem, event) {
-            var evt = document.createEvent("HTMLEvents");
+            var evt = document.createEvent('HTMLEvents');
             evt.initEvent(event, true, true);
             elem.dispatchEvent(evt);
         },
@@ -130,7 +130,7 @@ var FNInjection = (function() {
         },
 
         handleKey: function(e) {
-            var code = { 37: "previous", 39: "next" };
+            var code = { 37: 'previous', 39: 'next' };
             if (code.hasOwnProperty(e.keyCode) && e.ctrlKey) {
                 this.findLink(code[e.keyCode]);
             }
