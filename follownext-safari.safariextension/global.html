@@ -12,14 +12,13 @@
 		{
 			// You should always check the command.
 			if (event.command == "follow-next") {
-				alert("next");
-				// safari.self.tab.page.dispatchMessage(findLink, "next");
+				safari.application.activeBrowserWindow.activeTab.page.dispatchMessage('findLink', "next");
+
 			} else if (event.command == "follow-previous") {
-				alert("previous");
-				// safari.self.tab.dispatchMessage(findLink, "previous");
+				safari.application.activeBrowserWindow.activeTab.page.dispatchMessage('findLink', "previous");
 			}
 		}
-		
+				
 		function validateCommand(event)
 		{
 			// always check the command.
